@@ -1,0 +1,22 @@
+{
+  "name": "edgecast",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.client.json --noEmit && tsc -p tsconfig.worker.json --noEmit",
+    "dev": "npm run build && wrangler dev --local --port 8787",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "lucide": "1.16.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20260523.1",
+    "typescript": "6.0.3",
+    "vite": "8.0.14",
+    "wrangler": "4.94.0"
+  }
+}
